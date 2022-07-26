@@ -1,0 +1,96 @@
+.app {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: row;
+  margin: 0;
+
+  &__menu {
+    border-right: 0.05rem solid #bdc8d8;
+    flex: 1;
+    color: #b3a6a6;
+    font-weight: 700;
+
+    &--logo-box {
+      display: flex;
+      padding: 2rem;
+    }
+
+    &--logo {
+      margin-right: 0.6rem;
+    }
+
+    &--text {
+      color: #808992;
+    }
+
+    &--nav {
+    }
+
+    &--list {
+      padding: 2rem 2rem 0 2rem;
+    }
+
+    &--heading {
+      margin-bottom: 2rem;
+    }
+
+    &--item {
+      margin-bottom: 1.7rem;
+      color: #808992;
+      font-weight: 600;
+    }
+
+    &--item:hover {
+      color: #f11c62;
+      cursor: pointer;
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    flex: 6;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    padding-top: 2rem;
+    color: #808992;
+    font-weight: 600;
+    border-left: 0.05rem solid #bdc8d8;
+  }
+
+  &__main {
+    .main__nav {
+      max-width: 300px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 2rem;
+      color: #b3a6a6;
+      font-weight: 700;
+
+      &--movie:hover,
+      &--show:hover,
+      &--anime:hover {
+        color: #303e61;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+
+    &--collection {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}
