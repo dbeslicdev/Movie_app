@@ -1,7 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { MovieData } from "./MovieData";
 
-export const HomeContent = ({ movies }) => {
+export const HomeBody = ({ movies }) => {
+  console.log(movies);
   return (
     <div>
       <div className="app">
@@ -45,13 +47,39 @@ export const HomeContent = ({ movies }) => {
             <div className="app__body--hero">
               <img src=""></img>
             </div>
-            <div className="app__body--collection">
-              {movies.length > 0 &&
-                movies.map((movie) => <MovieData key={movie.id} {...movie} />)}
+            <div className="app__body--now-playing">
+              <h4>Now playing</h4>
+              <div className="collection-container">
+                {movies.length > 0 &&
+                  movies.map((movie) => (
+                    <ul>
+                      <Link to={`/movie/${movie.id}`}>
+                        <li>
+                          <MovieData key={movie.id} {...movie} />
+                        </li>
+                      </Link>
+                    </ul>
+                  ))}
+              </div>
+            </div>
+            <div className="app__body--top-rated">
+              <h4>Top Rated</h4>
+              <div className="collection-container">
+                {movies.length > 0 &&
+                  movies.map((movie) => (
+                    <ul>
+                      <Link to={`/movie/${movie.id}`}>
+                        <li>
+                          <MovieData key={movie.id} {...movie} />
+                        </li>
+                      </Link>
+                    </ul>
+                  ))}
+              </div>
             </div>
           </div>
         </div>
-        <div className="app__right">MicroFE</div>
+        <div className="app__micro">MicroFE</div>
       </div>
     </div>
   );
