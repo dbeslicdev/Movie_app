@@ -1,0 +1,18 @@
+.recommendation {
+  text-align: center;
+  &__container {
+  }
+  &__img {
+    margin-bottom: 0.2rem;
+  }
+  &__name {
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+  }
+
+  margin-bottom: 5rem;
+}
+
+.cast {
+  text-decoration: none;
+}

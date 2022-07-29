@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { MovieData } from "./MovieData";
 
+const IMG_API = "https://image.tmdb.org/t/p/w800";
+
 export const HomeBody = ({ movies }) => {
   console.log(movies);
   return (
@@ -9,7 +11,6 @@ export const HomeBody = ({ movies }) => {
       <div className="app">
         <div className="app__menu">
           <div className="app__menu--logo-box">
-            {/* <img src="" className="app__menu--logo"></img> */}
             <div className="app__menu--text">Movie app</div>
           </div>
           <div className="app__menu--nav">
@@ -22,18 +23,16 @@ export const HomeBody = ({ movies }) => {
               <div className="app__menu--item">Celebs</div>
             </div>
             <br />
-            <div className="app__menu--list">
-              <div className="app__menu--heading">LIBRARY</div>
-              <div className="app__menu--item">Recent</div>
-              <div className="app__menu--item">Top Rated</div>
-              <div className="app__menu--item">Download</div>
-            </div>
+
             <br />
             <div className="app__menu--list">
               <div className="app__menu--heading">CATEGORY</div>
-              <div className="app__menu--item">Movie</div>
-              <div className="app__menu--item">TV Show</div>
-              <div className="app__menu--item">Anime</div>
+              <Link to="/movies" style={{ textDecoration: "none" }}>
+                <div className="app__menu--item">Movies</div>
+              </Link>
+              <Link to="/shows" style={{ textDecoration: "none" }}>
+                <div className="app__menu--item">TV Shows</div>
+              </Link>
             </div>
           </div>
         </div>
@@ -41,11 +40,17 @@ export const HomeBody = ({ movies }) => {
           <div className="main__nav">
             <div className="main__nav--movie">Movie</div>
             <div className="main__nav--show">TV Show</div>
-            <div className="main__nav--anime">Anime</div>
           </div>
           <div className="app__body">
             <div className="app__body--hero">
-              <img src=""></img>
+              {movies.length > 0 &&
+                movies
+                  .map((movie) => (
+                    <div>
+                      <img src={IMG_API + movie.backdrop_path} />
+                    </div>
+                  ))
+                  .slice(0, 1)}
             </div>
             <div className="app__body--now-playing">
               <h4>Now playing</h4>

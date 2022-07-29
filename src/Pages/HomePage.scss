@@ -85,6 +85,17 @@
   &__body {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+
+    &--hero {
+      text-align: center;
+    }
+
+    &--hero img {
+      width: 90%;
+      margin-bottom: 1rem;
+    }
 
     &--now-playing,
     &--top-rated {

@@ -1,0 +1,15 @@
+.shows-collection {
+  display: flex;
+  width: 80%;
+  margin: auto;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+.flex {
+  display: flex;
+}
