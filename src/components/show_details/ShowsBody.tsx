@@ -3,7 +3,7 @@ import "./ShowsBody.scss";
 import { Link } from "react-router-dom";
 import { ShowData } from "./ShowData";
 
-const IMG_API = "https://image.tmdb.org/t/p/w400";
+const IMG_API = "https://image.tmdb.org/t/p/w800";
 
 export const ShowsBody = ({ shows }) => {
   console.log(shows);

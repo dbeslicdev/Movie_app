@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { MovieData } from "./MovieData";
 
-const IMG_API = "https://image.tmdb.org/t/p/w800";
+const IMG_API = "https://image.tmdb.org/t/p/w1280";
 
 export const HomeBody = ({ movies }) => {
   console.log(movies);

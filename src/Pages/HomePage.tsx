@@ -6,7 +6,7 @@ import { HomeBody } from "../components/home/HomeBody";
 export const HomePage: React.FC = () => {
   const [movies, setMovies] = useState([]);
   const [topRated, setTopRated] = useState([]);
-  const [newest, setNewest] = useState([]);
+  const [nowPlaying, setNowPlaying] = useState([]);
 
   const fetchData = useEffect(() => {
     fetch(
@@ -27,12 +27,12 @@ export const HomePage: React.FC = () => {
       .then((json) => json);
     setTopRated(topRated);
 
-    const newestMovies = await fetch(
+    const nowPlaying = await fetch(
       "https://api.themoviedb.org/3/movie/popular?api_key=15e839c63532046ead1a55a79f13f2f2&language=en&page=1",
     )
       .then((response) => response.json())
       .then((json) => json);
-    setNewest(newestMovies);
+    setNowPlaying(nowPlaying);
   };
 
    useEffect(() => {
@@ -40,7 +40,7 @@ export const HomePage: React.FC = () => {
   }, []); */
 
   console.log(topRated, "TopRated");
-  console.log(newest, "Newest");
+  console.log(nowPlaying, "Now Playing");
 
   return (
     <>

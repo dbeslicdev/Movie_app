@@ -3,14 +3,10 @@ import { Cast } from "../movie_details/Cast";
 import { Recommendations } from "../movie_details/Recommendations";
 import "./ShowBody.scss";
 
-/* import { Cast } from "./Cast";
-import { Recommendations } from "./Recommendations"; */
-
 const IMG_API = "https://image.tmdb.org/t/p/w300";
 
 export const ShowBody = ({ item }) => {
   console.log(item);
-  /* console.log(item.recommendations, "Recommendations"); */
 
   return (
     <div>

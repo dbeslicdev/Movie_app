@@ -1,7 +1,7 @@
 import * as React from "react";
-/* import "./MovieData.scss"; */
+import "./ShowData.scss";
 
-const IMG_API = "https://image.tmdb.org/t/p/w400";
+const IMG_API = "https://image.tmdb.org/t/p/w300";
 
 interface Props {
   key: number;
@@ -16,9 +16,9 @@ export const ShowData: React.FC<Props> = ({
 }: Props) => {
   console.log();
   return (
-    <div className="series">
+    <div className="shows">
       <img src={IMG_API + poster_path} alt={original_name} />
-      <div className="series__info">
+      <div className="shows__info">
         <h3>{original_name}</h3>
       </div>
     </div>

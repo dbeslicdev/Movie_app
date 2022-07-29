@@ -80,12 +80,12 @@
     font-weight: 900;
     font-size: 1.3rem;
     padding: 1rem;
-  }
 
-  &__container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      border: 2px solid red;
+    }
   }
 }
